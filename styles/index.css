@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto+Flex:opsz,wght@8..144,300 & display=swap');
+html,
+body{
+    margin: 0px;
+    font-family:'Roboto Flex', sans-serif;
+    background-image: url("/src/img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    height: 76px;
+    width: 100%;
+    /*no tenga margen superior*/
+    
+    background: #173B7B;
+    
+}
+#items{
+    /*se borre los viñetas*/
+    list-style: none;
+    text-align: right;
+    color: white;
+    /*maneja el espaciado superior del texto*/
+    margin: 0px;
+}
+#items li{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+#items li:hover{
+    background-color:rgb(23, 23, 23);
+}
+#content{
+    height: 50px;
+    list-style: none;
+    margin: 0px;
+    width: 800px;
+    top: 10px;
+    left: 20px;
+    background: white;
+    filter: drop-shadow(2px 2px 5px rgba(61, 61, 61, 0.79));
+    padding: 220px 1000px 0px 950px ;
+    margin-top: 200px;
+
+}
