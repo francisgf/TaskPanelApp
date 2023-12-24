@@ -1,7 +1,7 @@
 import { UserInterface } from "./user.interface";
 
 export interface TaskInterface {
-  id: string | Number;
+  id: string | number;
   name: string;
   title: string;
   tags: string[];

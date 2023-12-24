@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './page/login/login.component';
-import { SharedModule } from '@shared/shared/shared.module';
-import { RegisterComponent } from './page/register/register/register.component';
+import { SharedModule } from '@shared/shared.module';
+import { RegisterComponent } from './page/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { RegisterComponent } from './page/register/register/register.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    ReactiveFormsModule,
     SharedModule
   ]
 })

@@ -24,15 +24,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-#login-form h2{
-  padding:10px;
-  text-align: center;
-  color: rgb(88, 88, 88);
-}
 
-#login-form {
+#register-form {
   margin: auto;
-  height: 250px;
+  height: auto;
   padding: 5px;
   background-color: #ffffff;
   padding: 20px;
@@ -41,7 +36,12 @@ body {
   width: 300px;
 }
 
-#login-form input {
+#register-form h2{
+  padding:10px;
+  text-align: center;
+  color: rgb(88, 88, 88);
+}
+#register-form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -51,7 +51,7 @@ body {
   outline: none;
 }
 
-#login-form button {
+#register-form button {
   width: 100%;
   padding: 10px;
   background-color: #3498db;
@@ -62,24 +62,13 @@ body {
   cursor: pointer;
 }
 
-#register {
+#login-link {
   margin: 10px;
   text-align: center;
   color: #3498db;
   cursor: pointer;
   font-size: 14px;
 }
-#login-form input:focus {
+#register-form input:focus {
   border: 1px solid #3498db;
 }
-
-
-input.ng-invalid .ng-touched{
-  border: solid 1px  #db3460;
-}
-
-button:disabled{
-  cursor: none;
-  opacity: .5;
-}
-
