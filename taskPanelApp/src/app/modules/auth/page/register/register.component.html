@@ -11,19 +11,17 @@
   <div id="main">
     <div id="register-form">
       <h2 id="logim-title">Registrarse</h2>   
-      <form action="">
-        <input type="text" placeholder="Nombres" required>
-        <input type="text" placeholder="Apellidos" required>
-        <input type="text" placeholder="Nombre de Usuario" required>
-        <input type="text" placeholder="Correo" required>
-        <input type="text" placeholder="Celular" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button>Registrarse</button>
+      <form [formGroup]="registerForm" (submit)="sendRegister()">
+        <input formControlName="names" type="text" placeholder="Nombres" required>
+        <input formControlName="firtsNames" type="text" placeholder="Apellidos" required>
+        <input formControlName="userName" type="text" placeholder="Nombre de Usuario" required>
+        <input formControlName="email" type="text" placeholder="Correo" required>
+        <input formControlName="cellPhone" type="text" placeholder="Celular" required>
+        <input formControlName="password" type="password" placeholder="Contraseña" required>
+        <button [disabled]="registerForm.invalid">Registrarse</button>
       </form>
       <p id="login-link" routerLink="">Iniciar Sesión</p>   
-
     </div>
-
   </div>
 </body>
 </html>

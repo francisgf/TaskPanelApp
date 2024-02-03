@@ -1,9 +1,13 @@
 import { RolInterface } from "./rol.interface";
 
 export interface UserInterface{
-    id:string;
+    id:number;
     name:string;
-    age:number;
-    rols:RolInterface[];
+    firtsname:string;
+    userName:string;
+    email:string;
+    cellPhone:string;
+    passwonr:string
+   // rols:RolInterface[];
     
 }
