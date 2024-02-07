@@ -10,7 +10,7 @@
 <body>
   <div id="main">
     <div id="register-form">
-      <h2 id="logim-title">Registrarse</h2>   
+      <h2 id="logim-title">Registrarse</h2>
       <form [formGroup]="registerForm" (submit)="sendRegister()">
         <input formControlName="names" type="text" placeholder="Nombres" required>
         <input formControlName="firtsNames" type="text" placeholder="Apellidos" required>
@@ -20,7 +20,8 @@
         <input formControlName="password" type="password" placeholder="Contraseña" required>
         <button [disabled]="registerForm.invalid">Registrarse</button>
       </form>
-      <p id="login-link" routerLink="">Iniciar Sesión</p>   
+      <p *ngIf="controlMessageOut">{{messageOut}}</p>
+      <p id="login-link" routerLink="">Iniciar Sesión</p>
     </div>
   </div>
 </body>

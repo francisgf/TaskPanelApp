@@ -1,4 +1,4 @@
-import { UserInterface } from "./user.interface";
+import { UserInterface } from "./user.interfaceNode";
 
 export interface TaskInterface {
   id: string | number;

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { UserInterface } from '@core/models/user.interface';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { UserInterfaceNode } from '@core/models/user.interfaceNode';
 
 
 @Injectable({
@@ -33,9 +34,17 @@ export class AuthService {
       }
     );
 
-    return this.responseData;
+    if(this.responseData.status===true){
+      console.log("data",this.responseData.status);
+      return true;
+    } else{
+      return false;
+    }
+
+
   }
 
+  /* con spring
   register(userBody: UserInterface): Observable<any> {
     const url = this.urlRegister;
     const headers = new HttpHeaders({
@@ -49,5 +58,24 @@ export class AuthService {
         return throwError(error);
       })
     );
+  }*/
+
+
+  //con node
+  register(userBody: UserInterfaceNode): Observable<any> {
+    const url = this.urlRegister;
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    });
+
+    return this.http.post(url, userBody, { headers }).pipe(
+      catchError((error) => {
+        console.error('Error al registrar usuario:', error);
+        return throwError(error);
+      })
+    );
   }
+
+
 }

@@ -9,5 +9,5 @@ export interface UserInterface{
     cellPhone:string;
     passwonr:string
    // rols:RolInterface[];
-    
+
 }
